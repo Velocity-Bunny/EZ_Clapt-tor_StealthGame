@@ -10,6 +10,8 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float jumpHeight = 10;
 
     private Rigidbody2D playerRB;
+
+    [SerializeField] private bool isGrounded = true;
     //private Collider2D playerCol;
     
     
@@ -23,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        playerRB.velocity = new Vector2(moving, playerRB.velocity.y);
         Movement();
     }
 
@@ -31,13 +34,19 @@ public class PlayerControl : MonoBehaviour
     {
         moving = moveSpeed * (Input.GetAxisRaw("Horizontal"));
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            playerRB.velocity += jumpHeight * Vector2.up;
+            playerRB.AddForce(Vector2.up * jumpHeight , ForceMode2D.Impulse);
+            
         }
             
     }
-    
+
+    private void RigidContact()
+    {
+        //if
+        //playerRB.GetContacts(null);
+    }
     
     
     
