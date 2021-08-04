@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerControl : MonoBehaviour
 {
     
-    [SerializeField] private float moving = 1;
-    [SerializeField] private float moveSpeed = 20;
-    [SerializeField] private float jumpHeight = 10;
+    [SerializeField] protected float moving = 1;
+    [SerializeField] protected float moveSpeed = 20;
+    [SerializeField] protected float jumpHeight = 10;
+    protected Rigidbody2D playerRB;
+    [SerializeField] protected Collider2D wallCol; // you have to set up the collider in the inpsector
+    [SerializeField] protected Collider2D groundCol; // you have to set up the collider in the inpsector
 
-    private Rigidbody2D playerRB;
 
-    [SerializeField] private bool isGrounded = true;
+    [SerializeField] protected bool isGrounded = true;
     //private Collider2D playerCol;
     
     
@@ -20,6 +23,7 @@ public class PlayerControl : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         //playerCol = GetComponent<Collider2D>();
+        
     }
 
     // Update is called once per frame
@@ -27,13 +31,18 @@ public class PlayerControl : MonoBehaviour
     {
         playerRB.velocity = new Vector2(moving, playerRB.velocity.y);
         Movement();
+        ContactMe();
     }
 
-
-    private void Movement()
+    /// <summary>
+    /// Handles player movement
+    /// </summary>
+    protected void Movement()
     {
+        // horizontal movement
         moving = moveSpeed * (Input.GetAxisRaw("Horizontal"));
 
+        //jumping
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             playerRB.AddForce(Vector2.up * jumpHeight , ForceMode2D.Impulse);
@@ -42,10 +51,15 @@ public class PlayerControl : MonoBehaviour
             
     }
 
-    private void RigidContact()
+
+    protected void ContactMe()
     {
-        //if
-        //playerRB.GetContacts(null);
+        if(playerRB.IsTouching(groundCol))
+        {
+            isGrounded = true;
+        }
+        else
+            isGrounded = false;
     }
     
     
