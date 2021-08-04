@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 849573414}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 2099818285}
   - component: {fileID: 2099818284}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -533,6 +533,8 @@ MonoBehaviour:
   moving: 1
   moveSpeed: 20
   jumpHeight: 24
+  wallCol: {fileID: 0}
+  groundCol: {fileID: 0}
   isGrounded: 1
 --- !u!70 &2099818285
 CapsuleCollider2D:
