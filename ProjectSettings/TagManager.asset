@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EnemyLOS
   - Ground
+  - HidingSpot
   layers:
   - Default
   - TransparentFX
