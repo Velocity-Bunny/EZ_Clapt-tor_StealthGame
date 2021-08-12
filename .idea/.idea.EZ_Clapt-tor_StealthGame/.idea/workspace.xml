@@ -24,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/../2DOneButtonGame/Assets/2DOneButtonGame/Scripts/CannonController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CD247B5B-11A4-403F-AF72-D1261A82BE13/6c/d0a469b4/Collision.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../2DOneButtonGame/Assets/2DOneButtonGame/Scripts/PlayerScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EZClap-tor/Scripts/CheeseInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DoodleJumpStyleGame/Assets/Scripts/PlayerControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EZClap-tor/Scripts/TriggersAndContacts.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -32,6 +33,11 @@
       <option value="$PROJECT_DIR$/Assets/EZClap-tor/Scripts/AIBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/EZClap-tor/Scripts/TriggersAndContacts.cs" />
       <option value="$PROJECT_DIR$/Assets/EZClap-tor/Scripts/PlayerControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/EZClap-tor/Scripts/Items.cs" />
+      <option value="$PROJECT_DIR$/Assets/EZClap-tor/Scripts/Cheese.cs" />
+      <option value="$PROJECT_DIR$/Assets/EZClap-tor/Scripts/TypeofCheese.cs" />
+      <option value="$PROJECT_DIR$/Assets/EZClap-tor/Scripts/CheeseInventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/EZClap-tor/Scripts/Item.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vyYu4lpwuThAaffx21o3USWEYG" />
@@ -82,6 +88,7 @@
       <workItem from="1628039519711" duration="8899000" />
       <workItem from="1628132095421" duration="9491000" />
       <workItem from="1628644560747" duration="6483000" />
+      <workItem from="1628738603180" duration="2664000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Collections.Generic;using UnityEditor;
 using UnityEngine;
 
-public class Collectable : MonoBehaviour
+public class Item<T> where T : MonoBehaviour
 {
+     //public Sprite
+        
+        
+    
     // Start is called before the first frame update
     void Start()
     {
