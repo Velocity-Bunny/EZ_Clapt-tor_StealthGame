@@ -25,7 +25,7 @@ public class PlayerControl : MonoBehaviour
 
     private bool isMoving = false;
 
-    [SerializeField] protected bool isGrounded = true;
+    [SerializeField] protected bool isGrounded = false;
 
     [SerializeField] protected Transform raycastPos;
 
@@ -111,7 +111,16 @@ public class PlayerControl : MonoBehaviour
     }
 
 
+    protected void OnCollisionEnter(Collision _collision)
+    {
+        if(_collision.collider.CompareTag("Ground"))
+            isGrounded = true;
+        else
+            isGrounded = false;
 
+        
+
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -127,6 +136,14 @@ public class PlayerControl : MonoBehaviour
             playerColor.a = 1;
         }
             
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("HidingSpot"))
+        {
+            canHide = false;
+        }
     }
 }
 
